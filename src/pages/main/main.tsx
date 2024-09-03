@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../config/firebase";
 import { Post } from "./post";
+import { Link } from "react-router-dom";
 
 export interface Posts {
   id: string;
@@ -37,8 +38,9 @@ export const Main = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return(
-    <div>
-      please
+    <div className="home-message">
+        <h4>Please log in with your Gmail account to continue,</h4>
+        <Link to='/login'>login</Link>
     </div>
   );
 

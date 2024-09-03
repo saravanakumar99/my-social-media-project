@@ -12,9 +12,9 @@ export const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-message">
       <p> Sign In With Google To Continue </p>
-      <button onClick={signInWithGoogle}> Sign In With Google </button>
+      <button className="login-button" onClick={signInWithGoogle}> Sign In With Google </button>
     </div>
   );
 };

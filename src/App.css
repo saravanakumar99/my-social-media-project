@@ -228,3 +228,46 @@ textarea {
   color: #555;
   padding-right: 50px;
 }
+
+
+.home-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem; 
+  display: inline-block;
+  background-color: burlywood;
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+.home-message:hover{
+  box-shadow: 2p 2px 10px grey;
+}
+
+.login-message{
+  font-size: 1.5rem; 
+  display: inline-block;
+  background-color: burlywood;
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+.login-button{
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  transition: background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.login-button:hover{
+  background-color: brown;
+  color: #fff;
+}
+
