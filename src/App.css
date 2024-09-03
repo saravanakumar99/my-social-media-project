@@ -1,38 +1,230 @@
+
 .App {
   text-align: center;
+  color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  background: url(./images/new_1.1.png);
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(165, 106, 83);
+  box-shadow: 0.1px 0.1px 10px rgb(131, 118, 118);
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  color: rgb(255, 255, 255);
+  position: -webkit-sticky;
+  position:sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar .links {
+  text-align: center;
+  margin-right: 50px;
+  
+}
+
+.links a {
+  text-decoration: none;
+  padding-bottom: 2px;
+  margin: 10px;
+  color: white;
+  border-bottom: 0px solid white;
+  transition: border-bottom 0.2s ease-in-out;
+}
+.links a:hover{
+  border-bottom:5px solid rgb(255, 255, 255) ;
+}
+
+.navbar .user {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-right: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.user p {
+  font-size: 15px;
+  margin-right: 10px;
+  color: rgb(255, 255, 255);
+}
+.user img {
+  font-size: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.user button{
+  border-radius: 2px;
+  border:none;
+  padding: 2px 10px;
+}
+
+.user button:hover {
+  background-color:burlywood;
+  color: #fff; 
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar .logo a{
+  position:absolute;
+  left: 0;
+  top: 0;
+  padding-left: 20px;
+  padding-top: 10px;
+  text-shadow: 2px 2px 30px black;
+  text-decoration: none;
+  color: #fff;
+  font-size: 36px;
+}
+
+input,
+textarea {
+  font-family: "Nunito", sans-serif;
+}
+
+.create-post {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+form {
+  margin-top: 100px;
+  padding: 30px 0px;
+  padding-top: 60px;
+  width: 320px;
+  border-radius: 10px;
+  background-color: white;
+  backdrop-filter: blur(5px);
+  box-shadow: 2px 2px 10px gray;
+  overflow: hidden;
+  background: url(./images/new_3.png);
+  background-size: cover;
+}
+
+input,
+textarea {
+  padding: 8px 10px;
+  margin: 3px 8px 16px 8px;
+  background-color: rgba(211, 211, 211, 0.877);
+  border: 0px transparent;
+  border-radius: 7px;
+  color: grey;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.submitForm:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 5px grey;
+  background-color: burlywood;
+  transition: background-color 0.2s ease-in-out;
+  transition: box-shadow 0s ease-in-out;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-page {
+  background-color: #f0f0f0;
+  background-image: url(./images/new_3.1.png);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  min-height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.post-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.post-container:hover {
+  transform: scale(1.02);
+}
+
+.post-header {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.post-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.post-body {
+  margin-bottom: 15px;
+}
+
+.post-body p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.like-button {
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  transition: background-color 0.2s ease;
+}
+
+
+
+.like-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.like-icon {
+  color: gray; /* Default color for the icon */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.like-button.liked .like-icon {
+  color: red; /* Color when liked */
+}
+
+
+
+
+.like-count {
+  font-size: 14px;
+  color: #555;
+  padding-right: 50px;
 }
