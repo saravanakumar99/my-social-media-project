@@ -21,6 +21,9 @@ export const Navbar = () => {
 
   return (
     <div className="navbar">
+      <div className="logo">
+        <a href="/">Duo Quotes</a>
+      </div>
       <div className="links">
         <Link to="/"> Home </Link>
         {!user ? (
