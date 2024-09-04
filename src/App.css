@@ -13,8 +13,6 @@ body {
   background-size: cover;
 }
 
-/* Existing Styles */
-
 .navbar {
   width: 100%;
   height: 60px;
@@ -22,25 +20,25 @@ body {
   box-shadow: 0.1px 0.1px 10px rgb(131, 118, 118);
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Change from flex-end to space-between for better alignment */
+  justify-content: flex-end;
   color: rgb(255, 255, 255);
   position: -webkit-sticky;
-  position: sticky;
+  position:sticky;
   top: 0;
   z-index: 1;
-  padding: 0 10px; /* Add padding for better spacing */
 }
-
-.navbar .logo a {
-  position: relative;
+.navbar .logo a{
+  position: absolute;
   left: 0;
+  padding-left: 20px;
   font-size: 16px;
   text-shadow: 2px 2px 10px grey;
 }
 
 .navbar .links {
   text-align: center;
-  margin-right: 10px; /* Reduced margin for smaller screens */
+  margin-right: 50px;
+  
 }
 
 .links a {
@@ -51,16 +49,15 @@ body {
   border-bottom: 0px solid white;
   transition: border-bottom 0.2s ease-in-out;
 }
-
-.links a:hover {
-  border-bottom: 5px solid rgb(255, 255, 255);
+.links a:hover{
+  border-bottom:5px solid rgb(255, 255, 255) ;
 }
 
 .navbar .user {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px; /* Reduced margin for smaller screens */
+  margin-right: 50px;
   color: rgb(255, 255, 255);
 }
 
@@ -69,82 +66,33 @@ body {
   margin-right: 10px;
   color: rgb(255, 255, 255);
 }
-
 .user img {
   font-size: 15px;
   border-radius: 50%;
   margin-right: 10px;
-  width: 40px; /* Adjusted for mobile */
-  height: 40px; /* Adjusted for mobile */
 }
-
-.user button {
+.user button{
   border-radius: 2px;
-  border: none;
+  border:none;
   padding: 2px 10px;
 }
 
 .user button:hover {
-  background-color: burlywood;
-  color: #fff;
+  background-color:burlywood;
+  color: #fff; 
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.navbar .logo a {
-  position: relative;
+.navbar .logo a{
+  position:absolute;
   left: 0;
   top: 0;
-  padding-left: 10px; /* Adjusted for mobile */
+  padding-left: 20px;
   padding-top: 10px;
   text-shadow: 2px 2px 30px black;
   text-decoration: none;
   color: #fff;
-  font-size: 24px; /* Adjusted for mobile */
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column; /* Stack items vertically on mobile */
-    height: auto;
-    padding: 10px 20px;
-  }
-
-  .navbar .logo a {
-    font-size: 28px; /* Larger logo on mobile */
-    padding: 0; /* Remove padding for better alignment */
-  }
-
-  .navbar .links {
-    margin: 10px 0;
-  }
-
-  .links a {
-    margin: 5px 0;
-    font-size: 14px; /* Smaller font size for links */
-  }
-
-  .navbar .user {
-    margin-top: 10px;
-    margin-right: 0; /* Remove right margin on mobile */
-    justify-content: flex-start;
-    width: 100%; /* Make user section full-width */
-  }
-
-  .user p {
-    font-size: 14px;
-    margin-right: 5px;
-  }
-
-  .user img {
-    width: 35px; /* Smaller image on mobile */
-    height: 35px; /* Smaller image on mobile */
-  }
-
-  .user button {
-    padding: 5px 15px;
-    font-size: 14px; /* Smaller button font size */
-  }
+  font-size: 36px;
 }
 
 input,
