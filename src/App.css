@@ -115,6 +115,10 @@ body {
   .navbar .user{
     margin-right: 10px;
   }
+
+.main-page{
+  background-repeat: no-repeat;
+}
 }
 
 

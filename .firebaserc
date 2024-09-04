@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "my-social-media-app-5950a"
-  }
+    "default": "duo-quotes-2f6c8",
+    "production": "duo-quotes-2f6c8"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
